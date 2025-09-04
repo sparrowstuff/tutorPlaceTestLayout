@@ -1,0 +1,40 @@
+.burger-btn {
+	@include flexCenter(column, center, unset);
+	gap: 0.37rem;
+	background-color: unset;
+	border: unset;
+	$root: &;
+
+	transition: scale $transition-300;
+
+	@media (min-width: $vp-tablet) {
+		display: none;
+	}
+
+	&__top-line,
+	&__main-line,
+	&__bottom-line {
+		display: block;
+		width: 1.125rem;
+		height: 2px;
+		background-color: $white;
+
+		transition: transform $transition-300, opacity $transition-300;
+	}
+
+	&--opened {
+		background-color: unset;
+		border: unset;
+		scale: 1.3;
+
+		#{$root}__top-line {
+			transform: translateY(0.37rem) rotate(45deg);
+		}
+		#{$root}__main-line {
+			opacity: 0;
+		}
+		#{$root}__bottom-line {
+			transform: translateY(-0.6rem) rotate(-45deg);
+		}
+	}
+}

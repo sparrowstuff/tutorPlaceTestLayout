@@ -1,0 +1,75 @@
+.btn {
+	border: unset;
+	background-color: transparent;
+	padding: 1rem 1.37rem;
+	color: $white;
+	outline: 1px solid $white;
+	border-radius: 0.93rem;
+
+	font-size: $rem-1;
+	line-height: 1em;
+	font-weight: 400;
+
+	transition: color $transition-300, outline $transition-300,
+		background-color $transition-300, opacity $transition-300;
+
+	&:hover,
+	&:focus-visible,
+	&:focus-within {
+		outline: 1px solid $pink-light;
+		background-color: $pink-light;
+		color: $white;
+	}
+
+	&:active {
+		outline: 1px solid $pink-light;
+		background-color: $pink-light;
+		color: $black;
+	}
+
+	&:disabled {
+		outline: 1px solid $pink-light;
+		background-color: $pink-light;
+		color: $black;
+		opacity: 0.3;
+		pointer-events: none;
+	}
+
+	&--transparent {
+		outline: unset;
+		padding: unset;
+		border-radius: unset;
+
+		font-size: $rem-15;
+		color: $white;
+		font-family: $evolventa;
+		line-height: 1.1em;
+		opacity: 0.6;
+
+		transition: opacity $transition-300, color $transition-300;
+
+		&:hover,
+		&:focus-visible,
+		&:focus-within {
+			outline: unset;
+			background-color: unset;
+			color: $pink-light;
+			opacity: 1;
+		}
+
+		&:active {
+			outline: unset;
+			background-color: unset;
+			color: $pink;
+			opacity: 1;
+		}
+
+		&:disabled {
+			outline: unset;
+			background-color: unset;
+			pointer-events: none;
+			color: $pink;
+			opacity: 0.3;
+		}
+	}
+}

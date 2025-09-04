@@ -1,12 +1,12 @@
 .container {
 	max-width: 77rem;
 	width: 100%;
-	padding: 0 1rem;
+	padding: 0 1.5rem;
 	margin: 0 auto;
 
-	// @media (max-width: $vp-tablet) {
-	// 	padding: 0 2.5rem;
-	// }
+	@media (max-width: $vp-tablet) {
+		padding: 0 0.93rem;
+	}
 
 	// @media (max-width: 31.25rem) {
 	// 	padding: 0 1rem;

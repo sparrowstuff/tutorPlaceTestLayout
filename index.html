@@ -22,5 +22,90 @@
 		/>
 		<link rel="manifest" href="site.webmanifest" />
 	</head>
-	<body></body>
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="header__main-wrapper">
+					<a href="#" class="header__main-link"
+						><svg
+							class="header__main-link-logo"
+							width="42"
+							height="43"
+							aria-hidden="true"
+						>
+							<use xlink:href="images/sprite.svg#main-logo"></use>
+						</svg>
+						<span class="header__main-link-text">AI</span>
+					</a>
+					<nav class="main-nav">
+						<button class="main-nav__btn btn btn--transparent" type="button">
+							Главная</button
+						><button class="main-nav__btn btn btn--transparent" type="button">
+							Преимущества
+						</button>
+						<button
+							class="main-nav__get-permit-btn btn"
+							type="button"
+							aria-label="Получить доступ"
+							id="getPermitDesktop"
+						>
+							Получить доступ
+						</button>
+					</nav>
+					<button
+						class="burger-btn"
+						id="burgerBtn"
+						type="button"
+						aria-label="Открыть выпадающее меню"
+					>
+						<span class="burger-btn__top-line"></span>
+						<span class="burger-btn__main-line"></span>
+						<span class="burger-btn__bottom-line"></span>
+					</button>
+					<nav class="main-nav main-nav--mobile" id="mainNavMobile">
+						<button class="main-nav__btn btn btn--transparent" type="button">
+							Главная</button
+						><button class="main-nav__btn btn btn--transparent" type="button">
+							Преимущества
+						</button>
+						<button
+							class="main-nav__get-permit-btn btn"
+							type="button"
+							aria-label="Получить доступ"
+							id="getPermitMobile"
+						>
+							Получить доступ
+						</button>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<section class="hero">
+			<div class="container">
+				<div class="hero__main-wrapper">
+					<div class="hero__text-wrapper">
+						<h1 class="hero__main-title">Нейросеть</h1>
+						<h2 class="hero__sub-title">может все!</h2>
+						<p class="hero__description">
+							Мы&nbsp;уже живем в&nbsp;этой удивительной реальности
+						</p>
+						<button class="hero__btn btn btn--pink" type="button">
+							Погрузиться в новый мир
+						</button>
+					</div>
+					<picture class="hero__picture">
+						<source type="images/webp" srcset="images/hero/hero-desktop.webp" />
+						<img
+							class="hero__image"
+							src="images/hero/hero-desktop.png"
+							srcset="images/hero/hero-desktop@2x.png 2x"
+							alt="Нейросеть и ПК"
+							width="619"
+							height="664"
+						/>
+					</picture>
+				</div>
+			</div>
+		</section>
+	</body>
 </html>

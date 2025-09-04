@@ -1,0 +1,54 @@
+.header {
+	padding: 1.5rem 0 1.5rem 0;
+	$root: &;
+
+	&__main-wrapper {
+		@include flexCenter(row, center, space-between);
+		gap: 0.62rem;
+		position: relative;
+	}
+
+	&__main-link {
+		@include flexCenter(row, center, center);
+		gap: 1.12rem;
+
+		&:hover,
+		&:focus-visible {
+			#{$root}__main-link-text {
+				color: $pink;
+			}
+
+			#{$root}__main-link-logo {
+				scale: 1.2;
+
+				@media (max-width: $vp-tablet) {
+					scale: 0.9;
+				}
+			}
+		}
+
+		@media (max-width: $vp-tablet) {
+			gap: 0.5rem;
+		}
+	}
+
+	&__main-link-logo {
+		transition: scale $transition-300;
+
+		@media (max-width: $vp-tablet) {
+			scale: 0.7;
+		}
+	}
+
+	&__main-link-text {
+		color: $white;
+		font-size: $rem-275;
+		font-family: $involve;
+		line-height: 1.1em;
+		transition: color $transition-300;
+
+		@media (max-width: $vp-tablet) {
+			font-size: $rem-187;
+		}
+	}
+}
