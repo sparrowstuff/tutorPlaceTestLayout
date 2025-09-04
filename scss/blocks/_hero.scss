@@ -1,0 +1,52 @@
+.hero {
+	&__main-wrapper {
+		padding: 6rem 0;
+	}
+
+	&__main-inner-wrapper {
+		@include flexStart(column, flex-start);
+		gap: 1.87rem;
+	}
+
+	&__text-wrapper {
+		@include flexStart(column, flex-start);
+		// gap: 6px;
+	}
+
+	&__main-title {
+		max-width: 43rem;
+
+		font-size: $rem-75;
+		font-weight: 500;
+		letter-spacing: 0.02em;
+		line-height: 1.1em;
+
+		background: linear-gradient(
+			90deg,
+			$pink-light 0%,
+			$blue-light 44%,
+			$aquamarine 100%
+		);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		color: transparent;
+	}
+
+	&__sub-title {
+		color: $white;
+		font-size: $rem-5;
+		font-weight: 500;
+		letter-spacing: 0.02em;
+		// решить проблему с line-height когда будет првоерка pixel perfect
+		line-height: 80%;
+	}
+
+	&__description {
+		font-size: $rem-15;
+		color: $white;
+		line-height: 1.1em;
+
+		margin-top: 1.93rem;
+	}
+}

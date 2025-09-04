@@ -11,7 +11,8 @@
 	font-weight: 400;
 
 	transition: color $transition-300, outline $transition-300,
-		background-color $transition-300, opacity $transition-300;
+		background-color $transition-300, opacity $transition-300,
+		box-shadow $transition-300;
 
 	&:hover,
 	&:focus-visible,
@@ -69,6 +70,32 @@
 			background-color: unset;
 			pointer-events: none;
 			color: $pink;
+			opacity: 0.3;
+		}
+	}
+
+	&--pink {
+		font-size: $rem-15;
+		background-color: $pink;
+		outline: 1px solid $pink;
+
+		&:hover,
+		&:focus-visible,
+		&:focus-within {
+			background-color: $white;
+			color: $black;
+			box-shadow: 0 0 1.25rem 2px $pink-light;
+		}
+
+		&:active {
+			background-color: $white;
+			color: $black;
+		}
+
+		&:disabled {
+			pointer-events: none;
+			background-color: $white;
+			color: $black;
 			opacity: 0.3;
 		}
 	}
