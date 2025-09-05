@@ -9,10 +9,12 @@ function openBurgerMenu() {
 		navMobileMenu.classList.toggle('main-nav--show')
 
 		if (navMobileMenu.classList.contains('main-nav--show')) {
+			bodyBlurEl.style.position = 'fixed'
 			bodyBlurEl.style.filter = 'blur(9px)'
 			headerEl.style.filter = 'unset'
 		} else {
 			bodyBlurEl.style.filter = 'unset'
+			bodyBlurEl.style.position = 'unset'
 		}
 	})
 }
