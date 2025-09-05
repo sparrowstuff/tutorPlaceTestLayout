@@ -1,6 +1,6 @@
 .main-nav {
 	@include flexCenter(row, center, unset);
-	gap: 10vw;
+	gap: 6vw;
 	$root: &;
 	transition: opacity $transition-300;
 
