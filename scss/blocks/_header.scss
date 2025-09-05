@@ -1,6 +1,7 @@
 .header {
 	padding: 1.5rem 0 1.5rem 0;
 	$root: &;
+	z-index: 10;
 
 	&__main-wrapper {
 		@include flexCenter(row, center, space-between);

@@ -424,6 +424,7 @@ footer {
   font-size: 1rem;
   line-height: 1em;
   font-weight: 400;
+  font-family: "Evolventa", "Arial", sans-serif;
   transition: color ease-in 0.3s, outline ease-in 0.3s, background-color ease-in 0.3s, opacity ease-in 0.3s, box-shadow ease-in 0.3s;
 }
 .btn:hover, .btn:focus-visible, .btn:focus-within {
@@ -496,6 +497,7 @@ footer {
 
 .header {
   padding: 1.5rem 0 1.5rem 0;
+  z-index: 10;
 }
 .header__main-wrapper {
   display: flex;
@@ -570,16 +572,17 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: unset;
-  width: 90vw;
+  width: 97vw;
   gap: 1.84rem;
   background-color: #0c0d12;
   padding: 2.25rem 3.5rem 1.87rem 3.5rem;
-  position: absolute;
-  top: 100%;
-  left: 3%;
+  position: fixed;
+  top: 7%;
+  left: 1%;
   right: 0;
   opacity: 0;
   pointer-events: none;
+  z-index: 10;
 }
 .main-nav--mobile .main-nav__get-permit-btn {
   width: 60%;
@@ -588,6 +591,11 @@ footer {
 @media (min-width: 63.93rem) {
   .main-nav--mobile {
     display: none;
+  }
+}
+@media (max-width: 37.5rem) {
+  .main-nav--mobile {
+    width: 94vw;
   }
 }
 .main-nav--show {
@@ -630,6 +638,15 @@ footer {
 }
 .burger-btn--opened .burger-btn__bottom-line {
   transform: translateY(-0.6rem) rotate(-45deg);
+}
+
+.body-blur {
+  position: fixed;
+  top: 7%;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  transition: filter ease-in 0.3s;
 }
 
 .hero__main-wrapper {
@@ -765,6 +782,7 @@ footer {
   color: #ffffff;
   line-height: 1.1em;
   font-weight: 400;
+  font-family: "Evolventa", "Arial", sans-serif;
   margin-top: 2.5rem;
 }
 @media (max-width: 81.25rem) {
@@ -832,4 +850,37 @@ footer {
   .hero__btn {
     padding: 0.93rem 1rem 0.93rem 1rem;
   }
+}
+
+.advantages__main-wrapper {
+  padding: 2rem 0 5.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: unset;
+  gap: 6rem;
+}
+.advantages__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: unset;
+  gap: 1.5rem;
+}
+.advantages__title {
+  font-size: 5.62rem;
+  font-weight: 500;
+  line-height: 90%;
+  letter-spacing: 0.02em;
+  min-width: 57.87rem;
+}
+.advantages__description {
+  font-size: 1.5rem;
+  line-height: 110%;
+  font-family: "Evolventa", "Arial", sans-serif;
+  text-align: center;
+  max-width: 42.43rem;
+}
+.advantages__highlight-text {
+  color: #ca0078;
 }/*# sourceMappingURL=style.css.map */

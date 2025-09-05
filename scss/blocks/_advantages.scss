@@ -1,0 +1,34 @@
+.advantages {
+	&__main-wrapper {
+		padding: 2rem 0 5.25rem;
+		@include flexCenter(column, center, unset);
+		gap: 6rem;
+	}
+
+	&__text-wrapper {
+		@include flexCenter(column, center, unset);
+		gap: 1.5rem;
+	}
+
+	&__title {
+		font-size: $rem-562;
+		font-weight: 500;
+		line-height: 90%;
+		letter-spacing: 0.02em;
+
+		min-width: 57.87rem;
+	}
+
+	&__description {
+		font-size: $rem-15;
+		line-height: 110%;
+		font-family: $evolventa;
+		text-align: center;
+
+		max-width: 42.43rem;
+	}
+
+	&__highlight-text {
+		color: $pink;
+	}
+}
