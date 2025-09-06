@@ -37,6 +37,10 @@
 		pointer-events: none;
 	}
 
+	@media (max-width: $vp-tablet) {
+		border-radius: 0.56rem;
+	}
+
 	&--transparent {
 		outline: unset;
 		padding: unset;

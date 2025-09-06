@@ -1,22 +1,42 @@
 .advantages {
 	&__main-wrapper {
-		padding: 2rem 0 5.25rem;
+		padding: 4rem 0 5.25rem;
 		@include flexCenter(column, center, unset);
 		gap: 6rem;
+
+		@media (max-width: $vp-mobile) {
+			padding: 2.6rem 0 4rem;
+			gap: 1.5rem;
+		}
 	}
 
 	&__text-wrapper {
 		@include flexCenter(column, center, unset);
-		gap: 1.5rem;
+		gap: 2.5rem;
+		position: relative;
+
+		@media (max-width: $vp-mobile) {
+			gap: 1rem;
+		}
 	}
 
 	&__title {
-		font-size: $rem-562;
+		font-size: $rem-5;
 		font-weight: 500;
 		line-height: 90%;
 		letter-spacing: 0.02em;
+		text-align: center;
 
-		min-width: 57.87rem;
+		max-width: 57.87rem;
+
+		@media (max-width: 62.5rem) {
+			font-size: $rem-375;
+		}
+
+		@media (max-width: $vp-mobile) {
+			font-size: $rem-225;
+			max-width: 20.62rem;
+		}
 	}
 
 	&__description {
@@ -26,9 +46,44 @@
 		text-align: center;
 
 		max-width: 42.43rem;
+
+		@media (max-width: 62.5rem) {
+			font-size: $rem-1;
+		}
+
+		@media (max-width: $vp-mobile) {
+			max-width: 20.62rem;
+		}
 	}
 
 	&__highlight-text {
 		color: $pink;
+	}
+
+	&__pseudo-text {
+		position: absolute;
+		top: 60%;
+		z-index: -1;
+		width: 85vw;
+
+		@media (max-width: 64rem) {
+			top: -86%;
+			width: 97vw;
+		}
+
+		@media (max-width: $vp-mobile) {
+			top: -62%;
+		}
+	}
+
+	&__cards-block {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.87rem;
+
+		@media (max-width: $vp-mobile) {
+			grid-template-columns: 1fr;
+			gap: 0.93rem;
+		}
 	}
 }

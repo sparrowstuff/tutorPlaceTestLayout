@@ -15,14 +15,19 @@
 		@media (max-width: 56.25rem) {
 			flex-direction: column-reverse;
 		}
+
+		@media (max-width: $vp-mobile) {
+			padding: 0 0 1.12rem;
+			gap: 0.5rem;
+		}
 	}
 
-	&__main-inner-wrapper {
+	&__inner-wrapper {
 		@include flexStart(column, flex-start);
 		gap: 5rem;
 
 		@media (max-width: 81.25rem) {
-			gap: 1.87rem;
+			gap: 2rem;
 		}
 
 		@media (max-width: 31.25rem) {
@@ -140,7 +145,7 @@
 		}
 
 		@media (max-width: 31.25rem) {
-			margin-top: 1.12rem;
+			margin-top: 1.5rem;
 		}
 
 		@media (max-width: 22.5rem) {
@@ -170,9 +175,9 @@
 	}
 
 	&__btn {
-		@media (max-width: 43.75rem) {
+		@media (max-width: 56.25rem) {
 			font-size: $rem-1;
-			padding: 0.93rem 3.12rem 0.93rem 3.12rem;
+			padding: 0.93rem 2.5rem 0.93rem 2.5rem;
 			width: 100%;
 		}
 

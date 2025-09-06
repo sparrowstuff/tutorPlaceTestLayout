@@ -22,7 +22,7 @@
 		/>
 		<link rel="manifest" href="site.webmanifest" />
 	</head>
-	<body style="position: relative">
+	<body>
 		<header class="header">
 			<div class="container">
 				<div class="header__main-wrapper">
@@ -62,150 +62,150 @@
 						<span class="burger-btn__main-line"></span>
 						<span class="burger-btn__bottom-line"></span>
 					</button>
+					<nav class="main-nav main-nav--mobile" id="mainNavMobile">
+						<button class="main-nav__btn btn btn--transparent" type="button">
+							Главная</button
+						><button class="main-nav__btn btn btn--transparent" type="button">
+							Преимущества
+						</button>
+						<button
+							class="main-nav__get-permit-btn btn"
+							type="button"
+							aria-label="Получить доступ"
+							id="getPermitMobile"
+						>
+							Получить доступ
+						</button>
+					</nav>
 				</div>
 			</div>
 		</header>
-		<div class="body-blur">
-			<section class="hero">
-				<div class="container">
-					<div class="hero__main-wrapper">
-						<div class="hero__main-inner-wrapper">
-							<div class="hero__text-wrapper">
-								<h1 class="hero__main-title">Нейросеть</h1>
-								<h2 class="hero__sub-title">может все!</h2>
-								<p class="hero__description">
-									Мы&nbsp;уже живем в&nbsp;этой удивительной реальности
+		<section class="hero">
+			<div class="container">
+				<div class="hero__main-wrapper">
+					<div class="hero__inner-wrapper">
+						<div class="hero__text-wrapper">
+							<h1 class="hero__main-title">Нейросеть</h1>
+							<h2 class="hero__sub-title">может все!</h2>
+							<p class="hero__description">
+								Мы&nbsp;уже живем в&nbsp;этой удивительной реальности
+							</p>
+						</div>
+						<button class="hero__btn btn btn--pink" type="button">
+							Погрузиться в&nbsp;новый мир
+						</button>
+					</div>
+					<picture class="hero__picture">
+						<source type="images/webp" srcset="images/hero/hero-desktop.webp" />
+						<img
+							class="hero__image"
+							src="images/hero/hero-desktop.png"
+							srcset="images/hero/hero-desktop@2x.png 2x"
+							alt="Нейросеть и ПК"
+							width="619"
+							height="664"
+						/>
+					</picture>
+				</div>
+			</div>
+		</section>
+		<section class="advantages">
+			<div class="container">
+				<div class="advantages__main-wrapper">
+					<div class="advantages__text-wrapper">
+						<h2 class="advantages__title">Преимущества курса</h2>
+						<p class="advantages__description">
+							Поможем создать
+							<span class="advantages__highlight-text">корректный промт</span>,
+							чтобы вы&nbsp;получили максимально корректный вариант под ваши
+							нужды!
+						</p>
+						<svg
+							class="advantages__pseudo-text"
+							width="1662"
+							height="200"
+							aria-hidden="true"
+						>
+							<use xlink:href="images/sprite.svg#advantages-text"></use>
+						</svg>
+					</div>
+					<div class="advantages__cards-block">
+						<article class="card">
+							<div class="card__main-wrapper">
+								<svg
+									class="card__icon"
+									width="48"
+									height="48"
+									aria-hidden="true"
+								>
+									<use xlink:href="images/sprite.svg#goal"></use>
+								</svg>
+								<h3 class="card__title">Хотите открыть бизнес?</h3>
+								<p class="card__description">
+									Нейросеть поможет составить бизнес-план, рассчитать расходы,
+									нарисовать логотип, найти место получше и&nbsp;станет вашим
+									главным деловым партнером
 								</p>
 							</div>
-							<button class="hero__btn btn btn--pink" type="button">
-								Погрузиться в&nbsp;новый мир
-							</button>
-						</div>
-						<picture class="hero__picture">
-							<source
-								type="images/webp"
-								srcset="images/hero/hero-desktop.webp"
-							/>
-							<img
-								class="hero__image"
-								src="images/hero/hero-desktop.png"
-								srcset="images/hero/hero-desktop@2x.png 2x"
-								alt="Нейросеть и ПК"
-								width="619"
-								height="664"
-							/>
-						</picture>
+						</article>
+						<article class="card">
+							<div class="card__main-wrapper">
+								<svg
+									class="card__icon"
+									width="48"
+									height="48"
+									aria-hidden="true"
+								>
+									<use xlink:href="images/sprite.svg#suitcase"></use>
+								</svg>
+								<h3 class="card__title">Мечтаете об&nbsp;отпуске?</h3>
+								<p class="card__description">
+									Нейросеть поможет найти место по&nbsp;вашим запросам, выбрать
+									наилучший сезон, собрать чемодан, подыскать где остановиться
+									и&nbsp;сделать ваш отпуск незабываемым
+								</p>
+							</div>
+						</article>
+						<article class="card">
+							<div class="card__main-wrapper">
+								<svg
+									class="card__icon"
+									width="48"
+									height="48"
+									aria-hidden="true"
+								>
+									<use xlink:href="images/sprite.svg#check-list"></use>
+								</svg>
+								<h3 class="card__title">
+									Вы&nbsp;студент и&nbsp;нуждаетесь в&nbsp;помощи в&nbsp;учебе?
+								</h3>
+								<p class="card__description">
+									Нет проблем! Нейросеть&nbsp;&mdash; ваш лучший друг, который
+									поможет написать курсовую, решить сложный тест
+									и&nbsp;подготовиться к&nbsp;экзаменам
+								</p>
+							</div>
+						</article>
+						<article class="card">
+							<div class="card__main-wrapper">
+								<svg
+									class="card__icon"
+									width="48"
+									height="48"
+									aria-hidden="true"
+								>
+									<use xlink:href="images/sprite.svg#mental-health"></use>
+								</svg>
+								<h3 class="card__title">Интересует здоровый образ жизни?</h3>
+								<p class="card__description">
+									Нейросеть поделится советами по&nbsp;сбалансированному
+									питанию, безопасным тренировкам и&nbsp;поддержке мотивации.
+								</p>
+							</div>
+						</article>
 					</div>
 				</div>
-			</section>
-			<section class="advantages">
-				<div class="container">
-					<div class="advantages__main-wrapper">
-						<div class="advantages__text-wrapper">
-							<h2 class="advantages__title">Преимущества курса</h2>
-							<p class="advantages__description">
-								Поможем создать
-								<span class="advantages__highlight-text">корректный промт</span
-								>, чтобы вы&nbsp;получили максимально корректный вариант под
-								ваши нужды!
-							</p>
-							<span class="advantages__pseudo-text">Преимущества</span>
-						</div>
-						<div class="advantages__cards-block">
-							<article class="card">
-								<div class="card__main-wrapper">
-									<svg
-										class="card__icon"
-										width="48"
-										height="48"
-										aria-hidden="true"
-									>
-										<use xlink:href="images/sprite.svg#goal"></use>
-									</svg>
-									<h3 class="card__title">Хотите открыть бизнес?</h3>
-									<p class="card__description">
-										Нейросеть поможет составить бизнес-план, рассчитать расходы,
-										нарисовать логотип, найти место получше и&nbsp;станет вашим
-										главным деловым партнером
-									</p>
-								</div>
-							</article>
-							<article class="card">
-								<div class="card__main-wrapper">
-									<svg
-										class="card__icon"
-										width="48"
-										height="48"
-										aria-hidden="true"
-									>
-										<use xlink:href="images/sprite.svg#suitcase"></use>
-									</svg>
-									<h3 class="card__title">Мечтаете об&nbsp;отпуске?</h3>
-									<p class="card__description">
-										Нейросеть поможет найти место по&nbsp;вашим запросам,
-										выбрать наилучший сезон, собрать чемодан, подыскать где
-										остановиться и&nbsp;сделать ваш отпуск незабываемым
-									</p>
-								</div>
-							</article>
-							<article class="card">
-								<div class="card__main-wrapper">
-									<svg
-										class="card__icon"
-										width="48"
-										height="48"
-										aria-hidden="true"
-									>
-										<use xlink:href="images/sprite.svg#check-list"></use>
-									</svg>
-									<h3 class="card__title">
-										Вы&nbsp;студент и&nbsp;нуждаетесь в&nbsp;помощи
-										в&nbsp;учебе?
-									</h3>
-									<p class="card__description">
-										Нет проблем! Нейросеть&nbsp;&mdash; ваш лучший друг, который
-										поможет написать курсовую, решить сложный тест
-										и&nbsp;подготовиться к&nbsp;экзаменам
-									</p>
-								</div>
-							</article>
-							<article class="card">
-								<div class="card__main-wrapper">
-									<svg
-										class="card__icon"
-										width="48"
-										height="48"
-										aria-hidden="true"
-									>
-										<use xlink:href="images/sprite.svg#mental-health"></use>
-									</svg>
-									<h3 class="card__title">Интересует здоровый образ жизни?</h3>
-									<p class="card__description">
-										Нейросеть поделится советами по&nbsp;сбалансированному
-										питанию, безопасным тренировкам и&nbsp;поддержке мотивации.
-									</p>
-								</div>
-							</article>
-						</div>
-					</div>
-				</div>
-			</section>
-		</div>
-
-		<nav class="main-nav main-nav--mobile" id="mainNavMobile">
-			<button class="main-nav__btn btn btn--transparent" type="button">
-				Главная</button
-			><button class="main-nav__btn btn btn--transparent" type="button">
-				Преимущества
-			</button>
-			<button
-				class="main-nav__get-permit-btn btn"
-				type="button"
-				aria-label="Получить доступ"
-				id="getPermitMobile"
-			>
-				Получить доступ
-			</button>
-		</nav>
+			</div>
+		</section>
 	</body>
 </html>

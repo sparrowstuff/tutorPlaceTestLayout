@@ -2,12 +2,13 @@
 *::after,
 *::before {
 	box-sizing: border-box;
-	// outline: 4px solid black;
 }
 
 html {
 	scroll-behavior: smooth;
-	// overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
 }
 
 body {
