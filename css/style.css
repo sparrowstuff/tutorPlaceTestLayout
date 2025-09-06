@@ -541,19 +541,22 @@ footer {
 @media (max-width: 63.93rem) {
   .header__main-link {
     gap: 0.5rem;
+    align-items: flex-start;
   }
 }
 .header__main-link-logo {
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 2.65rem;
+  height: 2.65rem;
+  background: radial-gradient(87.1% 87.1% at 40.32% 20.97%, #f706a3 0%, #5a73ef 100%);
   transition: scale ease-in 0.3s;
 }
 @media (max-width: 63.93rem) {
   .header__main-link-logo {
-    scale: 0.7;
-  }
-}
-@media (max-width: 47.93rem) {
-  .header__main-link-logo {
-    scale: 0.5;
+    width: 1.3rem;
+    height: 1.3rem;
   }
 }
 .header__main-link-text {
@@ -947,7 +950,7 @@ footer {
 }
 @media (max-width: 47.93rem) {
   .advantages__pseudo-text {
-    top: -62%;
+    top: -74%;
   }
 }
 .advantages__cards-block {
@@ -1007,5 +1010,243 @@ footer {
 @media (max-width: 25rem) {
   .card__description {
     font-size: 0.75rem;
+  }
+}
+
+.modal {
+  background-color: #161524;
+  border-radius: 1.5rem;
+  border: unset;
+  outline: 3px solid #1b1a2c;
+  max-width: 43rem;
+  min-height: 48rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity ease-in 0.3s;
+}
+@media (max-width: 47.93rem) {
+  .modal {
+    max-width: 17.5rem;
+    min-height: 27.56rem;
+    border-radius: 0.75rem;
+  }
+}
+.modal__main-wrapper {
+  padding: 5.25rem 3.75rem 3.75rem 3.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: unset;
+  justify-content: unset;
+  gap: 1.87rem;
+  height: 100%;
+  position: relative;
+}
+@media (max-width: 47.93rem) {
+  .modal__main-wrapper {
+    padding: 3rem 0.93rem 0.93rem 0.93rem;
+    gap: 0.93rem;
+  }
+}
+.modal__info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: unset;
+  gap: 1.87rem;
+}
+@media (max-width: 47.93rem) {
+  .modal__info-wrapper {
+    gap: 0.93rem;
+  }
+}
+.modal__close-btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 1.87rem;
+  right: 3.75rem;
+}
+.modal__close-btn .modal__close-btn-first-line {
+  transform: rotate(45deg);
+}
+.modal__close-btn .modal__close-btn-second-line {
+  transform: rotate(-45deg);
+}
+@media (max-width: 47.93rem) {
+  .modal__close-btn {
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 0.93rem;
+    right: 0.93rem;
+  }
+}
+.modal__close-btn-first-line, .modal__close-btn-second-line {
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-color: #ffffff;
+}
+.modal__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: unset;
+  gap: 0.75rem;
+}
+.modal__title {
+  font-size: 2.75rem;
+  font-weight: 400;
+  line-height: 110%;
+  text-align: center;
+}
+@media (max-width: 47.93rem) {
+  .modal__title {
+    font-size: 1.87rem;
+  }
+}
+.modal__description {
+  font-family: "Evolventa", "Arial", sans-serif;
+  font-size: 1.5rem;
+  line-height: 110%;
+  text-align: center;
+}
+@media (max-width: 47.93rem) {
+  .modal__description {
+    font-size: 1rem;
+  }
+}
+.modal__img {
+  scale: 1.3;
+}
+@media (max-width: 47.93rem) {
+  .modal__img {
+    scale: 1.1;
+  }
+}
+
+.custom-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: unset;
+  gap: 1.87rem;
+}
+.custom-form__input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: unset;
+  gap: 1.87rem;
+  width: 100%;
+}
+@media (max-width: 47.93rem) {
+  .custom-form__input-wrapper {
+    gap: 0.93rem;
+  }
+}
+.custom-form__input {
+  background-color: #1b1a2c;
+  border-radius: 1.12rem;
+  border: 1px solid #1b1a2c;
+  width: 100%;
+  max-width: 35.5rem;
+  padding: 1.12rem 1.12rem 1rem 1.12rem;
+  height: 3.87rem;
+  transition: border ease-in 0.3s;
+  position: relative;
+  font-size: 1.5rem;
+  font-family: "Evolventa", "Arial", sans-serif;
+  line-height: 110%;
+  font-weight: 400;
+  color: #ffffff;
+}
+@media (max-width: 47.93rem) {
+  .custom-form__input {
+    font-size: 1rem;
+    padding: 0.56rem 0.56rem 0.56rem 0.56rem;
+    height: 2.25rem;
+    border-radius: 0.56rem;
+  }
+}
+.custom-form__input::-moz-placeholder {
+  font-size: 1.5rem;
+  font-family: "Evolventa", "Arial", sans-serif;
+  line-height: 110%;
+  font-weight: 400;
+  color: #ffffff;
+  opacity: 0.4;
+  -moz-transition: color ease-in 0.3s, opacity ease-in 0.3s;
+  transition: color ease-in 0.3s, opacity ease-in 0.3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.custom-form__input::placeholder {
+  font-size: 1.5rem;
+  font-family: "Evolventa", "Arial", sans-serif;
+  line-height: 110%;
+  font-weight: 400;
+  color: #ffffff;
+  opacity: 0.4;
+  transition: color ease-in 0.3s, opacity ease-in 0.3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 47.93rem) {
+  .custom-form__input::-moz-placeholder {
+    font-size: 1rem;
+  }
+  .custom-form__input::placeholder {
+    font-size: 1rem;
+  }
+}
+.custom-form__input:hover, .custom-form__input:focus-visible, .custom-form__input:active {
+  border: 1px solid #81f3f8;
+}
+.custom-form__input:hover::-moz-placeholder, .custom-form__input:focus-visible::-moz-placeholder, .custom-form__input:active::-moz-placeholder {
+  opacity: 1;
+}
+.custom-form__input:hover::placeholder, .custom-form__input:focus-visible::placeholder, .custom-form__input:active::placeholder {
+  opacity: 1;
+}
+.custom-form__input--error {
+  border: 1px solid #f706a3;
+}
+.custom-form__input--error::-moz-placeholder {
+  color: #f706a3;
+  opacity: 1;
+}
+.custom-form__input--error::placeholder {
+  color: #f706a3;
+  opacity: 1;
+}
+.custom-form__error {
+  font-size: 1rem;
+  font-family: "Evolventa", "Arial", sans-serif;
+  text-align: center;
+  color: #f706a3;
+  position: absolute;
+  bottom: 42%;
+  transition: opacity ease-in 0.3s;
+  opacity: 0;
+}
+@media (max-width: 47.93rem) {
+  .custom-form__error {
+    font-size: 0.75rem;
+  }
+}
+.custom-form__submit-btn {
+  width: 100%;
+}
+@media (max-width: 47.93rem) {
+  .custom-form__submit-btn {
+    padding: 0.56rem 0.56rem;
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */

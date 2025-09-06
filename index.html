@@ -22,19 +22,12 @@
 		/>
 		<link rel="manifest" href="site.webmanifest" />
 	</head>
-	<body>
+	<body style="position: relative">
 		<header class="header">
 			<div class="container">
 				<div class="header__main-wrapper">
-					<a href="#" class="header__main-link"
-						><svg
-							class="header__main-link-logo"
-							width="42"
-							height="43"
-							aria-hidden="true"
-						>
-							<use xlink:href="images/sprite.svg#main-logo"></use>
-						</svg>
+					<a href="#" class="header__main-link">
+						<span class="header__main-link-logo"></span>
 						<span class="header__main-link-text">AI</span>
 					</a>
 					<nav class="main-nav">
@@ -207,5 +200,54 @@
 				</div>
 			</div>
 		</section>
+
+		<article class="modal">
+			<div class="modal__main-wrapper">
+				<div class="modal__info-wrapper">
+					<button
+						class="modal__close-btn btn btn--transparent"
+						id="modalCloseBtn"
+						type="button"
+						aria-label="Закрыть окно"
+					>
+						<span class="modal__close-btn-first-line"></span>
+						<span class="modal__close-btn-second-line"></span>
+					</button>
+					<div class="modal__text-wrapper">
+						<h2 class="modal__title">Овладей нейросетями!</h2>
+						<p class="modal__description">
+							Получи в&nbsp;подарок доступ ко&nbsp;всем курсам
+						</p>
+					</div>
+					<picture class="modal__picture">
+						<source type="images/webp" src="images/modal/gift-desktop.webp" />
+						<img
+							class="modal__img"
+							src="images/modal/gift-desktop.png"
+							srcset="images/modal/gift-desktop@2x.png 2x"
+							alt="Подарок"
+							width="359"
+							height="324"
+						/>
+					</picture>
+				</div>
+				<form class="custom-form" id="modalForm" action="#" method="post">
+					<div class="custom-form__input-wrapper">
+						<input
+							class="custom-form__input"
+							id="formInput"
+							type="email"
+							placeholder="Введите e-mail"
+							min="7"
+							max="40"
+						/>
+						<span class="custom-form__error" id="inputError">ошибка</span>
+						<button class="custom-form__submit-btn btn btn--pink" type="submit">
+							Получить доступ
+						</button>
+					</div>
+				</form>
+			</div>
+		</article>
 	</body>
 </html>

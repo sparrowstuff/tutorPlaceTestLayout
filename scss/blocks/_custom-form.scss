@@ -1,0 +1,111 @@
+.custom-form {
+	@include flexCenter(column, center, unset);
+	gap: 1.87rem;
+
+	$root: &;
+
+	&__input-wrapper {
+		position: relative;
+		@include flexCenter(column, center, unset);
+		gap: 1.87rem;
+		width: 100%;
+
+		@media (max-width: $vp-mobile) {
+			gap: 0.93rem;
+		}
+	}
+
+	&__input {
+		background-color: $deep-dark-blue;
+		border-radius: 1.12rem;
+		border: 1px solid $deep-dark-blue;
+		width: 100%;
+		max-width: 35.5rem;
+		padding: 1.12rem 1.12rem 1rem 1.12rem;
+		height: 3.87rem;
+
+		transition: border $transition-300;
+
+		position: relative;
+
+		font-size: $rem-15;
+		font-family: $evolventa;
+		line-height: 110%;
+		font-weight: 400;
+		color: $white;
+
+		@media (max-width: $vp-mobile) {
+			font-size: $rem-1;
+
+			padding: 0.56rem 0.56rem 0.56rem 0.56rem;
+			height: 2.25rem;
+
+			border-radius: 0.56rem;
+		}
+
+		&::placeholder {
+			font-size: $rem-15;
+			font-family: $evolventa;
+			line-height: 110%;
+			font-weight: 400;
+			color: $white;
+			opacity: 0.4;
+			transition: color $transition-300, opacity $transition-300;
+
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			@media (max-width: $vp-mobile) {
+				font-size: $rem-1;
+			}
+		}
+
+		&:hover,
+		&:focus-visible,
+		&:active {
+			border: 1px solid $aquamarine;
+
+			&::placeholder {
+				opacity: 1;
+			}
+		}
+
+		&--error {
+			border: 1px solid $pink-light;
+
+			&::placeholder {
+				color: $pink-light;
+				opacity: 1;
+			}
+		}
+	}
+
+	&__error {
+		font-size: $rem-1;
+		font-family: $evolventa;
+		text-align: center;
+		color: $pink-light;
+
+		position: absolute;
+		bottom: 42%;
+
+		transition: opacity $transition-300;
+		opacity: 0;
+
+		@media (max-width: $vp-mobile) {
+			font-size: $rem-075;
+		}
+	}
+
+	&__submit-btn {
+		width: 100%;
+
+		@media (max-width: $vp-mobile) {
+			padding: 0.56rem 0.56rem;
+
+			font-size: $rem-1;
+		}
+	}
+}
