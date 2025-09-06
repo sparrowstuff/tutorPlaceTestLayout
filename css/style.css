@@ -576,8 +576,8 @@ footer {
   gap: 1.84rem;
   background-color: #0c0d12;
   padding: 2.25rem 3.5rem 1.87rem 3.5rem;
-  position: fixed;
-  top: 6%;
+  position: absolute;
+  top: 3.5%;
   left: 0;
   right: 0;
   opacity: 0;
@@ -638,14 +638,6 @@ footer {
 }
 .burger-btn--opened .burger-btn__bottom-line {
   transform: translateY(-0.6rem) rotate(-45deg);
-}
-
-.body-blur {
-  top: 7%;
-  left: 0;
-  right: 0;
-  z-index: 5;
-  transition: filter ease-in 0.3s;
 }
 
 .hero__main-wrapper {

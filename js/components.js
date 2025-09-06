@@ -1,21 +1,20 @@
 function openBurgerMenu() {
 	const burgerBtn = document.getElementById('burgerBtn')
 	const navMobileMenu = document.getElementById('mainNavMobile')
-	const bodyBlurEl = document.querySelector('.body-blur')
-	const headerEl = document.querySelector('header')
 
 	burgerBtn.addEventListener('click', () => {
 		burgerBtn.classList.toggle('burger-btn--opened')
 		navMobileMenu.classList.toggle('main-nav--show')
 
-		if (navMobileMenu.classList.contains('main-nav--show')) {
-			bodyBlurEl.style.position = 'fixed'
-			bodyBlurEl.style.filter = 'blur(9px)'
-			headerEl.style.filter = 'unset'
-		} else {
-			bodyBlurEl.style.filter = 'unset'
-			bodyBlurEl.style.position = 'unset'
-		}
+		const sectionBlocks = document.querySelectorAll('section')
+
+		sectionBlocks.forEach(block => {
+			if (navMobileMenu.classList.contains('main-nav--show')) {
+				block.style.filter = 'blur(9px)'
+			} else {
+				block.style.filter = 'unset'
+			}
+		})
 	})
 }
 
