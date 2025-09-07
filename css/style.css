@@ -1024,6 +1024,8 @@ footer {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
   transition: opacity ease-in 0.3s;
 }
 @media (max-width: 47.93rem) {
@@ -1043,9 +1045,14 @@ footer {
   height: 100%;
   position: relative;
 }
+@media (max-width: 64rem) {
+  .modal__main-wrapper {
+    padding: 5rem 3rem 5rem 3rem;
+  }
+}
 @media (max-width: 47.93rem) {
   .modal__main-wrapper {
-    padding: 3rem 0.93rem 0.93rem 0.93rem;
+    padding: 3rem 1.5rem 0.93rem 1.5rem;
     gap: 0.93rem;
   }
 }
@@ -1066,7 +1073,7 @@ footer {
   height: 1.5rem;
   position: absolute;
   top: 1.87rem;
-  right: 3.75rem;
+  right: 2.5rem;
 }
 .modal__close-btn .modal__close-btn-first-line {
   transform: rotate(45deg);
@@ -1125,6 +1132,10 @@ footer {
     scale: 1.1;
   }
 }
+.modal--show {
+  opacity: 1;
+  pointer-events: all;
+}
 
 .custom-form {
   display: flex;
@@ -1150,12 +1161,13 @@ footer {
 .custom-form__input {
   background-color: #1b1a2c;
   border-radius: 1.12rem;
-  border: 1px solid #1b1a2c;
+  border: unset;
+  outline: 1px solid #1b1a2c;
   width: 100%;
   max-width: 35.5rem;
   padding: 1.12rem 1.12rem 1rem 1.12rem;
   height: 3.87rem;
-  transition: border ease-in 0.3s;
+  transition: border ease-in 0.3s, outline ease-in 0.3s;
   position: relative;
   font-size: 1.5rem;
   font-family: "Evolventa", "Arial", sans-serif;
@@ -1207,7 +1219,7 @@ footer {
   }
 }
 .custom-form__input:hover, .custom-form__input:focus-visible, .custom-form__input:active {
-  border: 1px solid #81f3f8;
+  outline: 1px solid #81f3f8;
 }
 .custom-form__input:hover::-moz-placeholder, .custom-form__input:focus-visible::-moz-placeholder, .custom-form__input:active::-moz-placeholder {
   opacity: 1;
@@ -1216,7 +1228,7 @@ footer {
   opacity: 1;
 }
 .custom-form__input--error {
-  border: 1px solid #f706a3;
+  outline: 1px solid #f706a3;
 }
 .custom-form__input--error::-moz-placeholder {
   color: #f706a3;

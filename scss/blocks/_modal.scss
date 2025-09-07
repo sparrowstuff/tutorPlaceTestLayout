@@ -9,7 +9,8 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	// opacity: 0;
+	opacity: 0;
+	pointer-events: none;
 	transition: opacity $transition-300;
 	$root: &;
 
@@ -26,8 +27,12 @@
 		height: 100%;
 		position: relative;
 
+		@media (max-width: 64rem) {
+			padding: 5rem 3rem 5rem 3rem;
+		}
+
 		@media (max-width: $vp-mobile) {
-			padding: 3rem 0.93rem 0.93rem 0.93rem;
+			padding: 3rem 1.5rem 0.93rem 1.5rem;
 			gap: 0.93rem;
 		}
 	}
@@ -46,7 +51,7 @@
 		height: 1.5rem;
 		position: absolute;
 		top: 1.87rem;
-		right: 3.75rem;
+		right: 2.5rem;
 
 		#{$root}__close-btn-first-line {
 			transform: rotate(45deg);
@@ -106,5 +111,10 @@
 		@media (max-width: $vp-mobile) {
 			scale: 1.1;
 		}
+	}
+
+	&--show {
+		opacity: 1;
+		pointer-events: all;
 	}
 }

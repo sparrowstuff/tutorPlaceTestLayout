@@ -18,13 +18,14 @@
 	&__input {
 		background-color: $deep-dark-blue;
 		border-radius: 1.12rem;
-		border: 1px solid $deep-dark-blue;
+		border: unset;
+		outline: 1px solid $deep-dark-blue;
 		width: 100%;
 		max-width: 35.5rem;
 		padding: 1.12rem 1.12rem 1rem 1.12rem;
 		height: 3.87rem;
 
-		transition: border $transition-300;
+		transition: border $transition-300, outline $transition-300;
 
 		position: relative;
 
@@ -65,7 +66,7 @@
 		&:hover,
 		&:focus-visible,
 		&:active {
-			border: 1px solid $aquamarine;
+			outline: 1px solid $aquamarine;
 
 			&::placeholder {
 				opacity: 1;
@@ -73,7 +74,7 @@
 		}
 
 		&--error {
-			border: 1px solid $pink-light;
+			outline: 1px solid $pink-light;
 
 			&::placeholder {
 				color: $pink-light;

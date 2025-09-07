@@ -1,3 +1,6 @@
+const sectionBlocks = document.querySelectorAll('section')
+const headerEL = document.querySelector('.header')
+
 function openBurgerMenu() {
 	const burgerBtn = document.getElementById('burgerBtn')
 	const navMobileMenu = document.getElementById('mainNavMobile')
@@ -5,8 +8,6 @@ function openBurgerMenu() {
 	burgerBtn.addEventListener('click', () => {
 		burgerBtn.classList.toggle('burger-btn--opened')
 		navMobileMenu.classList.toggle('main-nav--show')
-
-		const sectionBlocks = document.querySelectorAll('section')
 
 		sectionBlocks.forEach(block => {
 			if (navMobileMenu.classList.contains('main-nav--show')) {
@@ -26,11 +27,44 @@ function openBurgerMenu() {
 	})
 }
 
+function modalMenuActions() {
+	const modalMenu = document.querySelector('.modal')
+	const closeBtn = document.getElementById('modalCloseBtn')
+	const anyGetPermitBtn = document.querySelectorAll('.main-nav__get-permit-btn')
+
+	closeBtn.addEventListener('click', () => {
+		if (modalMenu.classList.contains('modal--show')) {
+			modalMenu.classList.remove('modal--show')
+
+			if (window.innerWidth > 1024) {
+				sectionBlocks.forEach(block => {
+					block.style.filter = 'unset'
+				})
+
+				headerEL.style.filter = 'unset'
+			}
+		}
+	})
+
+	anyGetPermitBtn.forEach(btn => {
+		btn.addEventListener('click', () => {
+			modalMenu.classList.add('modal--show')
+
+			if (window.innerWidth > 1024) {
+				sectionBlocks.forEach(block => {
+					block.style.filter = 'blur(9px)'
+				})
+
+				headerEL.style.filter = 'blur(9px)'
+			}
+		})
+	})
+}
+
 function submitFormActions() {
 	const form = document.getElementById('modalForm')
 	const formInput = document.getElementById('formInput')
 	const errorText = document.getElementById('inputError')
-	const closeBtn = document.getElementById('modalCloseBtn')
 
 	form.addEventListener('submit', e => {
 		e.preventDefault()
@@ -48,4 +82,5 @@ function submitFormActions() {
 		}
 	})
 }
-export { openBurgerMenu, submitFormActions }
+
+export { openBurgerMenu, modalMenuActions, submitFormActions }
