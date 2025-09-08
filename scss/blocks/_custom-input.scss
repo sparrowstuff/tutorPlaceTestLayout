@@ -1,0 +1,102 @@
+.custom-input {
+	position: relative;
+	@include flexCenter(column, center, unset);
+	gap: 1.87rem;
+	width: 100%;
+	$root: &;
+	border: unset;
+	outline: 1px solid $deep-dark-blue;
+	transition: border $transition-300, outline $transition-300;
+	border-radius: 1.12rem;
+	overflow: unset;
+
+	@media (max-width: $vp-mobile) {
+		gap: 0.93rem;
+	}
+
+	&__label {
+		font-size: $rem-15;
+		font-family: $evolventa;
+		line-height: 110%;
+		font-weight: 400;
+		color: $white;
+		opacity: 0.4;
+		transition: color $transition-300, opacity $transition-300;
+		white-space: nowrap;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		pointer-events: none;
+
+		@media (max-width: $vp-mobile) {
+			font-size: $rem-1;
+		}
+	}
+
+	&__input {
+		background-color: $deep-dark-blue;
+		border-radius: 1.12rem;
+		border: unset;
+		width: 100%;
+		max-width: 35.5rem;
+		padding: 1.12rem 1.12rem 1rem 1.12rem;
+		height: 3.87rem;
+		outline: 1px solid $deep-dark-blue;
+		transition: outline $transition-300;
+
+		position: relative;
+
+		font-size: $rem-15;
+		font-family: $evolventa;
+		line-height: 110%;
+		font-weight: 400;
+		color: $white;
+
+		&:hover,
+		&:focus-visible,
+		&:active {
+			outline: 1px solid $aquamarine;
+
+			+ #{$root}__label {
+				opacity: 1;
+			}
+		}
+
+		@media (max-width: $vp-mobile) {
+			font-size: $rem-1;
+
+			padding: 0.56rem 0.56rem 0.56rem 0.56rem;
+			height: 2.25rem;
+
+			border-radius: 0.56rem;
+		}
+	}
+
+	&--error {
+		outline: 1px solid $pink-light;
+
+		+ #{$root}__label {
+			color: $pink-light;
+			opacity: 1;
+		}
+	}
+
+	&__error {
+		font-size: $rem-1;
+		font-family: $evolventa;
+		text-align: center;
+		color: $pink-light;
+
+		position: absolute;
+		bottom: -40%;
+
+		transition: opacity $transition-300;
+		opacity: 0;
+
+		@media (max-width: $vp-mobile) {
+			font-size: $rem-075;
+		}
+	}
+}

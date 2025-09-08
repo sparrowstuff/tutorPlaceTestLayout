@@ -15,9 +15,12 @@
 	$root: &;
 
 	@media (max-width: $vp-mobile) {
-		max-width: 17.5rem;
 		min-height: 27.56rem;
 		border-radius: 0.75rem;
+	}
+
+	@media (max-width: 25rem) {
+		max-width: 17.5rem;
 	}
 
 	&__main-wrapper {
@@ -28,7 +31,7 @@
 		position: relative;
 
 		@media (max-width: 64rem) {
-			padding: 5rem 3rem 5rem 3rem;
+			padding: 5rem 3rem 3rem 3rem;
 		}
 
 		@media (max-width: $vp-mobile) {
@@ -107,6 +110,7 @@
 
 	&__img {
 		scale: 1.3;
+		pointer-events: none;
 
 		@media (max-width: $vp-mobile) {
 			scale: 1.1;

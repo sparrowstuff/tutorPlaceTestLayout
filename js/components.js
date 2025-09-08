@@ -1,5 +1,6 @@
 const sectionBlocks = document.querySelectorAll('section')
 const headerEL = document.querySelector('.header')
+const modalMenu = document.querySelector('.modal')
 
 function openBurgerMenu() {
 	const burgerBtn = document.getElementById('burgerBtn')
@@ -24,11 +25,14 @@ function openBurgerMenu() {
 				sectionBlocks.forEach(block => (block.style.filter = 'unset'))
 			}
 		})
+
+		if (!burgerBtn.classList.contains('burger-btn--opened')) {
+			modalMenu.classList.remove('modal--show')
+		}
 	})
 }
 
 function modalMenuActions() {
-	const modalMenu = document.querySelector('.modal')
 	const closeBtn = document.getElementById('modalCloseBtn')
 	const anyGetPermitBtn = document.querySelectorAll('.main-nav__get-permit-btn')
 
@@ -65,12 +69,13 @@ function submitFormActions() {
 	const form = document.getElementById('modalForm')
 	const formInput = document.getElementById('formInput')
 	const errorText = document.getElementById('inputError')
+	const fakePlaceholder = document.getElementById('fakePlaceholder')
 
 	form.addEventListener('submit', e => {
 		e.preventDefault()
 
 		if (formInput.value.trim() === '') {
-			formInput.classList.add('custom-form__input--error')
+			formInput.classList.add('custom-input--error')
 			errorText.style.opacity = '1'
 		}
 	})
@@ -78,7 +83,10 @@ function submitFormActions() {
 	formInput.addEventListener('input', e => {
 		if (e.target.value.trim() !== '') {
 			errorText.style.opacity = '0'
-			formInput.classList.remove('custom-form__input-error')
+			formInput.classList.remove('custom-input--error')
+			fakePlaceholder.style.opacity = '0'
+		} else {
+			fakePlaceholder.style.opacity = '1'
 		}
 	})
 }

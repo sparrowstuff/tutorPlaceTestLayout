@@ -231,21 +231,33 @@
 						/>
 					</picture>
 				</div>
-				<form class="custom-form" id="modalForm" action="#" method="post">
-					<div class="custom-form__input-wrapper">
+				<form
+					class="custom-form"
+					id="modalForm"
+					name="permitForm"
+					action="#"
+					method="post"
+				>
+					<div class="custom-input">
 						<input
-							class="custom-form__input"
+							class="custom-input__input"
 							id="formInput"
 							type="email"
-							placeholder="Введите e-mail"
 							min="7"
 							max="40"
+							name="mail-input"
 						/>
-						<span class="custom-form__error" id="inputError">ошибка</span>
-						<button class="custom-form__submit-btn btn btn--pink" type="submit">
-							Получить доступ
-						</button>
+						<label
+							for="mail-input"
+							id="fakePlaceholder"
+							class="custom-input__label"
+							>Введите&nbsp;e-mail</label
+						>
+						<span class="custom-input__error" id="inputError">ошибка</span>
 					</div>
+					<button class="custom-form__submit-btn btn btn--pink" type="submit">
+						Получить доступ
+					</button>
 				</form>
 			</div>
 		</article>
