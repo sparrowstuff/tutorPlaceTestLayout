@@ -220,7 +220,10 @@
 						</p>
 					</div>
 					<picture class="modal__picture">
-						<source type="images/webp" src="images/modal/gift-desktop.webp" />
+						<source
+							type="images/webp"
+							srcset="images/modal/gift-desktop.webp"
+						/>
 						<img
 							class="modal__img"
 							src="images/modal/gift-desktop.png"
@@ -240,15 +243,13 @@
 				>
 					<div class="custom-input">
 						<input
-							class="custom-input__input"
+							class="custom-input__field"
 							id="formInput"
 							type="email"
-							min="7"
-							max="40"
 							name="mail-input"
 						/>
 						<label
-							for="mail-input"
+							for="formInput"
 							id="fakePlaceholder"
 							class="custom-input__label"
 							>Введите&nbsp;e-mail</label

@@ -1,4 +1,4 @@
-const sectionBlocks = document.querySelectorAll('section')
+let sectionBlocks = document.querySelectorAll('section')
 const headerEL = document.querySelector('.header')
 const modalMenu = document.querySelector('.modal')
 

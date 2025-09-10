@@ -1028,6 +1028,11 @@ footer {
   pointer-events: none;
   transition: opacity ease-in 0.3s;
 }
+@media (max-width: 37.5rem) {
+  .modal {
+    top: 40%;
+  }
+}
 @media (max-width: 47.93rem) {
   .modal {
     min-height: 27.56rem;
@@ -1037,6 +1042,7 @@ footer {
 @media (max-width: 25rem) {
   .modal {
     max-width: 17.5rem;
+    top: 50%;
   }
 }
 .modal__main-wrapper {
@@ -1203,7 +1209,7 @@ footer {
     font-size: 1rem;
   }
 }
-.custom-input__input {
+.custom-input__field {
   background-color: #1b1a2c;
   border-radius: 1.12rem;
   border: unset;
@@ -1220,14 +1226,14 @@ footer {
   font-weight: 400;
   color: #ffffff;
 }
-.custom-input__input:hover, .custom-input__input:focus-visible, .custom-input__input:active {
+.custom-input__field:hover, .custom-input__field:focus-visible, .custom-input__field:active {
   outline: 1px solid #81f3f8;
 }
-.custom-input__input:hover + .custom-input__label, .custom-input__input:focus-visible + .custom-input__label, .custom-input__input:active + .custom-input__label {
+.custom-input__field:hover + .custom-input__label, .custom-input__field:focus-visible + .custom-input__label, .custom-input__field:active + .custom-input__label {
   opacity: 1;
 }
 @media (max-width: 47.93rem) {
-  .custom-input__input {
+  .custom-input__field {
     font-size: 1rem;
     padding: 0.56rem 0.56rem 0.56rem 0.56rem;
     height: 2.25rem;
