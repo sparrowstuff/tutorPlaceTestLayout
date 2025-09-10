@@ -21,7 +21,7 @@
 
 		position: absolute;
 		top: 90%;
-		left: 0;
+		left: -1%;
 		right: 0;
 
 		opacity: 0;
@@ -39,6 +39,10 @@
 
 		@media (max-width: 37.5rem) {
 			width: 99vw;
+		}
+
+		@media (max-width: 31.25rem) {
+			left: -4%;
 		}
 	}
 

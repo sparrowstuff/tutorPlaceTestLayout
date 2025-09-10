@@ -6,13 +6,10 @@
 
 	@media (max-width: $vp-tablet) {
 		padding: 0 0.93rem;
+		max-width: 63.93rem;
 	}
 
-	// @media (max-width: $vp-mobile) {
-	// 	max-width: 22.5rem;
-	// }
-
-	// @media (max-width: 31.25rem) {
-	// 	padding: 0 1rem;
-	// }
+	@media (max-width: 25rem) {
+		max-width: 25rem;
+	}
 }

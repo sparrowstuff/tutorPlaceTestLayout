@@ -14,7 +14,11 @@
 	transition: opacity $transition-300;
 	$root: &;
 
-	@media (max-width: 37.5rem) {
+	@media (max-width: 64rem) {
+		top: 60%;
+	}
+
+	@media (max-width: 56.25rem) {
 		top: 40%;
 	}
 
@@ -23,9 +27,13 @@
 		border-radius: 0.75rem;
 	}
 
+	@media (max-width: 37.5rem) {
+		top: 40%;
+	}
+
 	@media (max-width: 25rem) {
 		max-width: 17.5rem;
-		top: 50%;
+		top: 49%;
 	}
 
 	&__main-wrapper {
